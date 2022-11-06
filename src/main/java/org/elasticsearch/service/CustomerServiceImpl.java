@@ -9,6 +9,7 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.Requests;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.model.Customer;
+import org.elasticsearch.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,13 +22,10 @@ public class CustomerServiceImpl implements CustomerService{
     RestHighLevelClient restHighLevelClient;
     @Autowired
     ObjectMapper objectMapper;
-
-
-    private static final String INDEX_NAME = "customer";
-    
+        
     @Override
     public String createCustomer(Customer customer) throws Exception {
-        IndexRequest indexRequest = Requests.indexRequest(INDEX_NAME)
+        IndexRequest indexRequest = Requests.indexRequest(Constants.ELASTIC_SEARCH_CUSTOMER_INDEX)
                 .source(convertProductToMap(customer));
 
         RequestOptions options = RequestOptions.DEFAULT;
