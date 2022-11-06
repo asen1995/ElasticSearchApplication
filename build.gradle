@@ -14,7 +14,12 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
     implementation "org.springframework.boot:spring-boot-starter:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot"  
+    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot"
+    implementation "org.springframework.boot:spring-boot-starter-data-elasticsearch:$spring_boot"
+
+    implementation "org.elasticsearch:elasticsearch:$elastic"
+    implementation "org.elasticsearch.client:elasticsearch-rest-high-level-client:$elastic"
+    implementation "org.elasticsearch.plugin:percolator-client:$elastic"
 }
 
 test {
