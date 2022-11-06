@@ -14,15 +14,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
     implementation "org.springframework.boot:spring-boot-starter:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-actuator:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-actuator-autoconfigure:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-data-rest:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-web-services:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-freemarker:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-security:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-log4j2:$spring_boot"
-    implementation "org.springframework.boot:spring-boot-starter-tomcat:$spring_boot"
+    implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot"  
 }
 
 test {
